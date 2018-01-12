@@ -1,6 +1,7 @@
 import React from 'react';
 import home from '../../images/home.png';
 import search from '../../images/search.png';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 // Simulation-3 38C
@@ -14,7 +15,7 @@ const Header = (props) => {
                     <img src={search} className="icons"/>
                 </div>
                 <div className="page">{props.page}</div>
-                <div className="logout">Logout</div>
+                <Link to="/login"className="logout">Logout</Link>
             </div>
         </div>
     );

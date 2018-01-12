@@ -31,7 +31,7 @@ class Home extends Component {
   }
 }
 
-
+// Simulation 43H
 function mapStateToProps(state){
   return {
     firstName: state.firstName,
