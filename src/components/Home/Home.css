@@ -1,2 +1,33 @@
+.main {
+    background-color: #F2F2F2;
+    height: 100vh;
+}
 
+.content {
+    border-radius: 2px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    box-sizing: border-box;
+}
 
+.profile {
+    width: 700px;
+    margin: 20px auto;
+    display: flex;
+}
+
+.info-card {
+    flex: 2;
+    text-align: left;
+}
+
+.profile-card {
+    flex: 1;
+    margin: 0 15px 0 0;
+}
+
+.recommended {
+    width: 700px;
+    margin: auto;
+}
