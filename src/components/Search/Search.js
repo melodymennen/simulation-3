@@ -8,7 +8,18 @@ class Search extends Component {
       <div className="main">
             <Header page="Search"/>
             <div className="content" >
-              Search
+              <div className="search">
+                <select className="dropdown">
+                  <option>First Name</option>
+                  <option>Last Name</option>
+                </select>
+                <input className="input"/>
+                <button className="dark button">Search</button>
+                <button className="light button">Reset</button>
+              </div>
+              <div className="list">
+              
+              </div>
 
             </div>
       </div>
