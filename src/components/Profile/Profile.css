@@ -18,13 +18,41 @@
 }
 
 .input-card {
+    display: flex;
+    justify-content: center;
+}
 
+.left {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px;
+}
+
+.input {
+    border: solid 1px #FF9770;
+    font-size: 18px;
+    width: 200px;
+    padding: 3px 5px;
+    box-sizing: border-box;
+}
+
+.dropdown {
+    font-size: 18px;
+    width: 200px;
+    
 }
 
 .button {
     padding: 5px 15px;
     box-sizing: border-box;
     font-size: 12px;
+    text-decoration: none;
 }
 
 .dark {
@@ -39,3 +67,4 @@
     background-image: radial-gradient(circle at 50% 0, #FFFFFF, #F1ECEB);
     border: solid 1px #CCC3C3;
 }
+

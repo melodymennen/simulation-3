@@ -3,6 +3,7 @@ import home from '../../images/home.png';
 import search from '../../images/search.png';
 import './Header.css';
 
+// Simulation-3 38C
 const Header = (props) => {
     return (
         <div className="header">

@@ -25,9 +25,37 @@
 .profile-card {
     flex: 1;
     margin: 0 15px 0 0;
+    display: flex;
+}
+
+.photo {
+    width: 100px; 
+    height: 100px;
+    border: solid 1px #FF9770;
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
 }
 
 .recommended {
     width: 700px;
     margin: auto;
+}
+
+.button {
+    padding: 5px 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.light {
+    border-radius: 1px; 
+    background-image: radial-gradient(circle at 50% 0, #FFFFFF, #F1ECEB);
+    border: solid 1px #CCC3C3;
+    font-size: 14px;
 }
