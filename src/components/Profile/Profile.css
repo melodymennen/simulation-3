@@ -7,4 +7,35 @@
     border-radius: 2px;
     background-color: #FFFFFF;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    width: 700px;
+    margin: 15px auto; 
+    padding: 10px; 
+    box-sizing: border-box;
+}
+
+.profile-card {
+
+}
+
+.input-card {
+
+}
+
+.button {
+    padding: 5px 15px;
+    box-sizing: border-box;
+    font-size: 12px;
+}
+
+.dark {
+    border-radius: 1px; 
+    background-image: radial-gradient(circle at 50%-46%, #737373, #403D39);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+.light {
+    border-radius: 1px; 
+    background-image: radial-gradient(circle at 50% 0, #FFFFFF, #F1ECEB);
+    border: solid 1px #CCC3C3;
 }
