@@ -9,16 +9,16 @@ const app = express();
  
 app.use(bodyParser.json());
 app.use(session({
-secret: process.env.SESSION_SECRET, 
-saveUninitialized: false, 
-resave: false
+    secret: process.env.SESSION_SECRET, 
+    saveUninitialized: false, 
+    resave: false
 }));
  
 massive(process.env.CONNECTION_STRING).then(db => {
-app.set('db', db)
+    app.set('db', db)
 }).catch(error => {
-console.log('error', error)
+    console.log('error', error)
 });
  
-const port = process.env.PORT
+const port = process.env.SERVER_PORT
 app.listen(port, () => console.log('listening on port ' + port));
