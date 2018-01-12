@@ -21,12 +21,31 @@ massive(process.env.CONNECTION_STRING).then(db => {
     console.log('error', error)
 });
 
-axios.post('/login', (req, res) ={
-    const { userId } = req.body 
-    const auth0Url = `https://${process.env.REACT_APP_AUTH0_DOMAIN}/api/v2/users/${userId}`
+// axios.get(auth0Url, { 
+//     headers: {
+//         Authorization: 'Bearer' + process.env.AUTH0_MANAGEMENT_ACCESS_TOKEN
+//     }}).then(response => {
+//         const userData = response.data
+//         req.session.user = { 
+//             name: userData.name, 
+//             email: userData.email, 
+//             auth0_id: userData.user_id, 
+//             picture_url: userData.picture
+//         }
+//         res.json({user: req.session.user})
+//         app.get('db').find_user([userData.user_id]).then(users => {
+//             if(users.length){
+//                 app.get('db').create_user([userData.user_id, userData.email, userData.picture_url, userData.name])
+//             }
+//         }).then(() => {
 
-    axios.get(auth0Url, {headers: {Authorization: "Bearer" + process.env.AUTH0_MANAGEMENT_ACCESS_TOKEN}})
-})
+//         }).catch(error => {
+//             console.log('error', error)
+//         })
+//     }).catch(error => {
+//         res.status(500).json({message: 'somethings broken'})
+//     })
+
  
 const port = process.env.SERVER_PORT
 app.listen(port, () => console.log('listening on port ' + port));

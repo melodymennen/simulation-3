@@ -11,8 +11,8 @@ const Header = (props) => {
             <div className="inner-div" >
                 <div className="header-logo">
                     Helo
-                    <img src={home} className="icons"/>
-                    <img src={search} className="icons"/>
+                    <Link to="/"><img src={home} className="icons"/></Link>
+                    <Link to="/search"><img src={search} className="icons"/></Link>
                 </div>
                 <div className="page">{props.page}</div>
                 <Link to="/login"className="logout">Logout</Link>

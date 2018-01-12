@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { updateFirstName, updateLastName, updateGender, updateHairColor, updateEyeColor } from '../../ducks/reducer';
+import { updateFirstName, updateLastName, updateGender, updateHairColor, updateEyeColor, updateHobby, updateBdayDay, updateBdayMonth, updateBdayYear } from '../../ducks/reducer';
 import './Profile.css';
 
 class Profile extends Component {
   render() {
 
-    const { updateFirstName, updateLastName, updateGender, updateHairColor, updateEyeColor } = this.props;
+    const { updateFirstName, updateLastName, updateGender, updateHairColor, updateEyeColor, updateHobby, updateBdayDay, updateBdayMonth, updateBdayYear } = this.props;
 
     return (
       <div className="main">
@@ -54,11 +54,13 @@ class Profile extends Component {
               </div>
               <div className="right">
                   Hobby
-                  <select className="dropdown" >
+                  <select className="dropdown" onChange={e => updateHobby(e.target.value)}>
+                    <option>Select</option>
                     <option></option>
                   </select>
                   Birthday Day 
-                  <select className="dropdown" >
+                  <select className="dropdown" onChange={e => updateBdayDay(e.target.value)}>
+                    <option>Select</option>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -66,7 +68,8 @@ class Profile extends Component {
                     <option>5</option>
                   </select>
                   Birthday Month 
-                  <select className="dropdown" >
+                  <select className="dropdown" onChange={e => updateBdayMonth(e.target.value)}>
+                    <option>Select</option>
                     <option>January</option>
                     <option>February</option>
                     <option>March</option>
@@ -81,7 +84,8 @@ class Profile extends Component {
                     <option>December</option>
                   </select>
                   Birthday Year
-                  <select className="dropdown" >
+                  <select className="dropdown" onChange={e => updateBdayYear(e.target.value)}>
+                    <option>Select</option>
                     <option>2018</option>
                     <option>2017</option>
                   </select>
@@ -92,13 +96,17 @@ class Profile extends Component {
   }
 }
 
-// Simulation-3
+// Simulation-3 43J
 const mapDispatchToProps = {
   updateFirstName,
   updateLastName, 
   updateGender,
   updateHairColor,
-  updateEyeColor
+  updateEyeColor, 
+  updateHobby, 
+  updateBdayDay, 
+  updateBdayMonth, 
+  updateBdayYear
 }
 
 export default connect(null, mapDispatchToProps)(Profile);

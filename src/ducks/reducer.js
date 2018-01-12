@@ -17,6 +17,10 @@ const UPDATE_LAST_NAME = 'UPDATE_LAST_NAME';
 const UPDATE_GENDER = 'UPDATE_GENDER';
 const UPDATE_HAIR_COLOR = 'UPDATE_HAIR_COLOR';
 const UPDATE_EYE_COLOR = 'UPDATE_EYE_COLOR';
+const UPDATE_HOBBY = 'UPDATE_HOBBY';
+const UPDATE_BDAY_DAY = 'UPDATE_BDAY_DAY';
+const UPDATE_BDAY_MONTH = 'UPDATE_BDAY_MONTH';
+const UPDATE_BDAY_YEAR = 'UPDATE_BDAY_YEAR';
  
 
 export function login (user){
@@ -61,6 +65,35 @@ export function updateEyeColor (eyeColor){
     }
 }
  
+export function updateHobby (hobby){
+    return {
+        type: UPDATE_HOBBY,
+        payload: hobby
+    }
+}
+ 
+export function updateBdayDay (bdayDay){
+    return {
+        type: UPDATE_BDAY_DAY,
+        payload: bdayDay
+    }
+}
+ 
+export function updateBdayMonth (bdayMonth){
+    return {
+        type: UPDATE_BDAY_MONTH,
+        payload: bdayMonth
+    }
+}
+ 
+export function updateBdayYear (bdayYear){
+    return {
+        type: UPDATE_BDAY_YEAR,
+        payload: bdayYear
+    }
+}
+ 
+ 
 
 export default (state = initialState, action) => {
     switch (action.type){
@@ -76,6 +109,14 @@ export default (state = initialState, action) => {
             return {...state, hairColor: action.payload}
         case UPDATE_EYE_COLOR:
             return {...state, eyeColor: action.payload}
+        case UPDATE_HOBBY:
+            return {...state, hobby: action.payload}
+        case UPDATE_BDAY_DAY:
+            return {...state, bdayDay: action.payload}
+        case UPDATE_BDAY_MONTH:
+            return {...state, bdayMonth: action.payload}
+        case UPDATE_BDAY_DAY:
+            return {...state, bdayYear: action.payload}
         default: 
             return state
     }

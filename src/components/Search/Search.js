@@ -7,7 +7,10 @@ class Search extends Component {
     return (
       <div className="main">
             <Header page="Search"/>
-            Search
+            <div className="content" >
+              Search
+
+            </div>
       </div>
     );
   }
